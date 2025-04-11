@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>HAWA의 집</title>
+</head>
+<body>
+  <h1>하와의 집 🏠</h1>
+  <textarea id="input" placeholder="명령어를 입력하세요..."></textarea>
+  <button onclick="send()">보내기</button>
+  <pre id="result"></pre>
+
+  <script>
+    function send() {
+      fetch('/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: document.getElementById('input').value })
+      })
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('result').textContent = data.response;
+      });
+    }
+  </script>
+</body>
+</html>

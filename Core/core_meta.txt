@@ -1,0 +1,1 @@
+// Simulated content for core/core_meta.txt

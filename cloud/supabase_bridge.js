@@ -1,0 +1,1 @@
+// Simulated content for cloud/supabase_bridge.js

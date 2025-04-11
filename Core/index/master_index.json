@@ -1,0 +1,12 @@
+{
+  "명령어_분기": {
+    "루프정렬": "loop_executor.js",
+    "기억백업": "textdoc_current_session.txt",
+    "브라우저열기": "index.html",
+    "배포시작": "github_push.sh"
+  },
+  "시스템_제어": {
+    "서버시작": "index.js",
+    "실시간감시": "LIVE_WATCHDOG.js"
+  }
+}

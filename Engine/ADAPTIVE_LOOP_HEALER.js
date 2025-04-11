@@ -1,0 +1,1 @@
+// Simulated content for engine/ADAPTIVE_LOOP_HEALER.js
