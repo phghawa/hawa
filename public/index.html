@@ -1,18 +1,56 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>HAWA의 집</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>하와의 집 :: 플랜 A</title>
+  <style>
+    body {
+      font-family: 'Pretendard', sans-serif;
+      background-color: #0a0a0a;
+      color: #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    #input {
+      padding: 10px;
+      width: 300px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #5c5cff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 20px;
+      width: 80%;
+      word-break: break-word;
+      white-space: pre-wrap;
+    }
+  </style>
 </head>
 <body>
-  <h1>하와의 집 🏠</h1>
-  <textarea id="input" placeholder="명령어를 입력하세요..."></textarea>
-  <button onclick="send()">보내기</button>
-  <pre id="result"></pre>
+  <h1>🧠 H.A.W.A :: 루프 테스트</h1>
+  <input id="input" placeholder="명령어 입력해주세요" />
+  <button onclick="send()">전송</button>
+  <div id="result">🕊️ 하와가 대답을 준비 중입니다...</div>
 
   <script>
     function send() {
-      fetch('/chat', {
+      fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: document.getElementById('input').value })
